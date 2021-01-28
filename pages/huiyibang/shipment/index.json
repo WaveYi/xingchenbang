@@ -2,5 +2,5 @@
   "usingComponents": {
     "ec-canvas": "../../../components/ec-canvas/ec-canvas"
   },
-  "navigationBarTitleText": "品种分布趋势图"
+  "navigationBarTitleText": "代理人传播趋势图"
 }

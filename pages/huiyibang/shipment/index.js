@@ -113,7 +113,7 @@ Page({
   getOption(){
     var option = {
       title: {
-        text: '品种分布趋势图',
+        text: '代理人传播趋势图',
         left: 'center'
       },
       // color: ["#37A2DA", "#67E0E3", "#9FE6B8"],
