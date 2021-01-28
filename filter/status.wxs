@@ -1,0 +1,155 @@
+ var status = {
+  filterStatus: function(status){
+    var status_txt = '';
+    if(status == '0'){
+      status_txt = '已邀请';
+    }else if(status == '1'){
+      status_txt = '已同意';
+    }else if(status == '2'){
+      status_txt = '已拒绝';
+    }
+    return status_txt;
+  },
+
+  menuStatus: function(status){
+    var status_txt = '';
+    if(status == '0' || status == null){
+      status_txt = '未开始';
+    }else if(status == '1'){
+      status_txt = '正在进行';
+    }else if(status == '2'){
+      status_txt = '已结束';
+    }else{
+      status_txt = '已删除'
+    }
+    return status_txt;
+  },
+  
+  homeRoleStatus: function(status){
+    var status_txt = '';
+    if(status == '1'){
+      status_txt = '申请中';
+    }else if(status == '2'){
+      status_txt = '正常';
+    }else{
+      status_txt = '已拒绝'
+    }
+    return status_txt;
+  },
+
+  roleStatus: function(status){
+    // 角色 0 消费者 1 店铺老板 2 治疗经理 3 代理人 4 销售员 5 嘉宾邀请 6 会议观察员 7 物流站点 8 新用户经理 9 老用户经理
+    var status_txt = '';
+    if(status == '0' || status == null){
+      status_txt = '用户';
+    }else if(status == '1'){
+      status_txt = '店铺老板';
+    }else if(status == '2'){
+      status_txt = '治疗经理';
+    }else if(status == '3'){
+      status_txt = '代理人';
+    }else if(status == '4'){
+      status_txt = '销售员';
+    }else if(status == '5'){
+      status_txt = '嘉宾邀请';
+    }else if(status == '6'){
+      status_txt = '会议观察员';
+    }else if(status == '7'){
+      status_txt = '物流站点'
+    }else if(status == '8'){
+      status_txt = '新用户经理';
+    }else if(status == '9'){
+      status_txt = '老用户经理';
+    }else{
+      status_txt = '';
+    }
+    return status_txt;
+  },
+
+  logRoleStatus: function(status){
+    // 物流角色 0 物流封装站点 1 物流装车站点 2 物流中转站点 3 物流散货站点 
+    var status_txt = '';
+    if(status == '0' || status == null || status == ''){
+      status_txt = '物流封装站点';
+    }else if(status == '1'){
+      status_txt = '物流装车站点';
+    }else if(status == '2'){
+      status_txt = '物流中转站点';
+    }else if(status == '3'){
+      status_txt = '物流散货站点';
+    }
+    return status_txt;
+  },
+
+  positionStatus: function(status){
+    // 职位 0 农场老板 1 会议高管 2 会议经理
+    var status_txt = '';
+    if(status == 0){
+      status_txt = '企业老板';
+    }else if(status == 1){
+      status_txt = '企业高管';
+    }else{
+      status_txt = '企业经理'
+    }
+    return status_txt;
+  },
+
+  projectStatus: function(status){
+    // 节目类型 0:扫码观看视频 1：节目关注抽奖 2：投票 3：参与者抽奖
+    var status_txt = '';
+    if(status == 0){
+      status_txt = '扫码观看视频';
+    }else if(status == 1){
+      status_txt = '节目关注抽奖';
+    }else if(status == 2){
+      status_txt = '投票';
+    }else{
+      status_txt = '参与者抽奖';
+    }
+    return status_txt;
+  },
+  
+  inviteStatus: function(status){
+    // 促销券状态(0:待接受,1:已接受,2:已完成)
+    var status_txt = '';
+    if(status == 0 || status == null){
+      status_txt = '待接受';
+    }else if(status == 1){
+      status_txt = '已接受';
+    }else{
+      status_txt = '已完成'
+    }
+    return status_txt;
+  },
+
+  videoType: function(status){
+    // 促销券状态(0:待接受,1:已接受,2:已完成)
+    var status_txt = '';
+    if(status == 0 || status == null){
+      status_txt = '天基权净空器';
+    }else if(status == 1){
+      status_txt = '舒博士多功能激光梳';
+    }else if(status == 2){
+      status_txt = 'GSLT半导体激光治疗仪';
+    }else if(status == 3){
+      status_txt = '天基权易康量子能量养生仪';
+    }else if(status == 4){
+      status_txt = '天基权易康闪电通';
+    }else{
+      status_txt = '天基权易康制氧机'
+    }
+    return status_txt;
+  }
+ }
+
+ module.exports = {
+  filterStatus: status.filterStatus,
+  menuStatus: status.menuStatus,
+  homeRoleStatus: status.homeRoleStatus,
+  roleStatus: status.roleStatus,
+  logRoleStatus: status.logRoleStatus,
+  positionStatus: status.positionStatus,
+  projectStatus: status.projectStatus,
+  inviteStatus: status.inviteStatus,
+  videoType: status.videoType
+ }

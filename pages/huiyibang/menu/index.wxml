@@ -1,0 +1,42 @@
+<!--pages/huiyibang/menu/index.wxml-->
+<!-- <view class="house_list_box">
+  <view class="house_item" wx:for="{{menu_list}}" bindlongpress="delMenuProject" data-id="{{item.idKey}}" wx:key="index">
+    <view class="house_box">
+      <view class="house_name">视频标题：{{item.title}}</view>
+      <view class="status">视频类型：{{status.projectStatus(item.type)}}</view>
+    </view>
+    
+    <view class="house_edit" wx:if="{{is_from==''}}">
+      <button size="mini" type="default" data-item="{{item}}" data-index="{{index}}" catchtap="operating">操作</button>
+      <button wx:if="{{item.status != 2}}" size="mini" type="primary" data-item="{{item}}" catchtap="lookVideo">视频</button>
+    </view>
+  </view>
+</view> -->
+
+<view wx:if="{{menu_list.length!=0}}">
+  <wxs src="../../../filter/status.wxs" module="status"></wxs>
+  <van-collapse value="{{ activeNames }}" bind:change="onChange">
+    <van-collapse-item wx:for="{{videoTypes}}" wx:key="index" title="{{status.videoType(item)}}" name="{{index}}">
+      <van-cell wx:for="{{menu_list}}" wx:for-item="video" wx:key="index" wx:if="{{video.type==item}}" is-link title="{{video.title}}" data-item="{{video}}" bindtap="pageTo" />
+    </van-collapse-item>
+  </van-collapse>
+</view>
+<view class="no_data_txt" wx:else>暂无数据</view>
+
+
+<van-popup show="{{ show1 }}" bind:close="onClose1" position="bottom">
+  <view class="project_header">
+    <text class="p_cancel" bindtap="onClose1">取消</text>
+    <view class="p_txt">选择项目</view>
+    <text class="p_confirm" bindtap="selectConfirm">确定</text>
+  </view>
+  <scroll-view scroll-y bindscrolltolower="loadMore" class="project_popup_box">
+    <radio-group bindchange="selectProject">
+      <view class="project_item" wx:for="{{project_list}}" wx:key="index">
+        <radio value="{{index}}" checked="{{is_checked}}" /> {{item.typeName}}
+      </view>
+    </radio-group>
+  </scroll-view>
+</van-popup>
+
+<view wx:if="{{is_from==''}}" class="no_house" bindtap="toCreate">添加视频</view>

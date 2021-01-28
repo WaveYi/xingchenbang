@@ -1,0 +1,3 @@
+<!--pages/shopmall/index.wxml-->
+<!-- <text>pages/shopmall/index.wxml</text> -->
+<web-view src="https://qianyejg.com/"></web-view>

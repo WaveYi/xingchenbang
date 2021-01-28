@@ -1,0 +1,3 @@
+<!--pages/huiyibang/moreVideoDetail/index.wxml-->
+<video src="{{url}}" autoplay loop="" custom-cache="{{true}}" vslide-gesture>
+</video>

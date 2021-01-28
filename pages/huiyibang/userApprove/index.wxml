@@ -1,0 +1,15 @@
+<!--pages/qinqinhehe/companyApprove/index.wxml-->
+<view class="company_box" wx:if="{{company_list.length!=0}}">
+  <view class="company_item" wx:for="{{company_list}}" wx:key="index">
+    <view class="company_left">
+      <view>二维码id: {{item.codeId}}</view>
+      <view>绑定用户: {{item.userNickname}}</view>
+      <view>审批状态: {{item.applyStatus==0?'待审批':item.applyStatus==1?'已同意':'已拒绝'}}</view>
+    </view>
+    <view class="company_right" wx:if="{{item.applyStatus==0}}">
+      <button size="mini" type="primary" data-item="{{item}}" catchtap="agreeBtn">同意</button>
+      <button size="mini" type="warn" data-item="{{item}}" catchtap="rejectBtn">拒绝</button>
+    </view>
+  </view>
+</view>
+<view class="no_data_txt" wx:else>暂无数据</view>

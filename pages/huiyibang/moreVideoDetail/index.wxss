@@ -1,0 +1,5 @@
+/* pages/huiyibang/moreVideoDetail/index.wxss */
+video {
+  width: 100%;
+  height: 100vh;
+}

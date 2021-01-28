@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "更多视频",
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index"
+  }
+}

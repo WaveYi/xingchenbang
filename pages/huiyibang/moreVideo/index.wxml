@@ -1,0 +1,9 @@
+<!--pages/huiyibang/moreVideo/index.wxml-->
+<view>
+  <view class="nav_list">
+    <view bindtap="clickNav" data-index="{{index}}" class="{{nav_active==index?'on':''}}" wx:for="{{nav_list}}" wx:key="index">{{item}}</view>
+  </view>
+  <view class="more_box">
+    <van-cell wx:for="{{more_list}}" wx:key="index" is-link title="{{item.title}}" data-index="index" bindtap="pageTo" />
+  </view>
+</view>
