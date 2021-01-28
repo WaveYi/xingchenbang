@@ -18,9 +18,8 @@ Page({
     role_type: '2',
     is_edit: 0,//是否修改进来 0:不是  1:是
     items: [
-      {value: '8', name: '新用户经理', checked: 'true'},
-      {value: '9', name: '老用户经理'},
-      {value: '10', name: '代理人'}
+      {value: '8', name: '用户经理', checked: 'true'},
+      {value: '4', name: '销售员'},
     ],
     remark: '',//站点名称
     roomId: '',

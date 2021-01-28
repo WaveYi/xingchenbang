@@ -1,8 +1,14 @@
 <!--pages/huiyibang/Browse/index.wxml-->
-<view>
-  <van-cell-group>
+<view class="list_container">
+  <!-- <van-cell-group>
     <block wx:for="{{functionList}}" wx:key="index">
       <van-cell is-link title="{{item.name}}" data-url="{{item.url}}" bindtap="pageTo" />
     </block>
-  </van-cell-group>
+  </van-cell-group> -->
+  <view class="title">{{list_title}}:</view>
+  <view>
+    <view wx:for="{{infoList}}" wx:key="index">
+      <view class="list_item">{{item.name}}扫描观看了视频</view>
+    </view>
+  </view>
 </view>

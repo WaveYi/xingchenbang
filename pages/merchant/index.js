@@ -480,7 +480,7 @@ Page({
       return;
     }
     if(this.data.room_name==''){
-      publicFun.getToast('请输入会议名称')
+      publicFun.getToast('请输入公司名称')
       return;
     }
     // if(this.data.person_phone==''){
@@ -488,7 +488,7 @@ Page({
     //   return;
     // }
     if(this.data.roomImg==''){
-      publicFun.getToast('请选择会议背景图片')
+      publicFun.getToast('请选择公司背景图片')
       return;
     }
     let data = {

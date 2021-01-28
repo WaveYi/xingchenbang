@@ -38,14 +38,14 @@
   },
 
   roleStatus: function(status){
-    // 角色 0 消费者 1 店铺老板 2 治疗经理 3 代理人 4 销售员 5 嘉宾邀请 6 会议观察员 7 物流站点 8 新用户经理 9 老用户经理
+    // 角色 0 消费者 1 公司老板 2 公司经理 3 代理人 4 销售员 5 嘉宾邀请 6 会议观察员 7 物流站点 8 用户经理 9 老用户经理
     var status_txt = '';
     if(status == '0' || status == null){
-      status_txt = '用户';
+      status_txt = '消费者';
     }else if(status == '1'){
-      status_txt = '店铺老板';
+      status_txt = '公司老板';
     }else if(status == '2'){
-      status_txt = '治疗经理';
+      status_txt = '公司经理';
     }else if(status == '3'){
       status_txt = '代理人';
     }else if(status == '4'){
@@ -57,7 +57,7 @@
     }else if(status == '7'){
       status_txt = '物流站点'
     }else if(status == '8'){
-      status_txt = '新用户经理';
+      status_txt = '用户经理';
     }else if(status == '9'){
       status_txt = '老用户经理';
     }else{
