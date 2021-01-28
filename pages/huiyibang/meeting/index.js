@@ -299,8 +299,14 @@ Page({
           icon: '/assets/hyb/hyb13.png'
         }
       ]
+    }else if(this.data.room_identity == 0){
+      // 消费者
+      meeting_list = [{
+        title: '查看代理收益',
+        icon: '/assets/hyb/hyb1.png'
+      }]
     }else if(this.data.room_identity == 1){
-      // 烟草老板
+      // 公司老板
       meeting_list = [{
         title: '查看角色申请',
         icon: '/assets/hyb/hyb1.png'
@@ -321,7 +327,7 @@ Page({
         icon: '/assets/hyb/hyb6.png'
       }]
     }else if(this.data.room_identity == 8){
-      // 新用户经理
+      // 用户经理
       meeting_list = [
         {
           title: '审批',
@@ -333,16 +339,10 @@ Page({
           title: '权益接收',
           icon: '/assets/hyb/hyb5.png'
         },{
-          title: '视频列表',
-          icon: '/assets/hyb/hyb4.png'
-        },{
           title: '销售',
           icon: '/assets/hyb/hyb11.png'
         },{
           title: '验证',
-          icon: '/assets/hyb/hyb11.png'
-        },{
-          title: '扫码绑定类型',
           icon: '/assets/hyb/hyb11.png'
         }
       ]
@@ -532,11 +532,17 @@ Page({
                 array = ['代理人'];
                 role_list = [3];
               }else if(data[0].roleType == 1){
-                array = ['店铺老板','新用户经理','老用户经理'];
-                role_list = [1,8,9];
+                array = ['公司老板','用户经理','销售员','消费者'];
+                role_list = [1,8,4,0];
               }else if(data[0].roleType == 2){
                 array = ['新用户经理','老用户经理'];
                 role_list = [8,9];
+              }else if(data[0].roleType == 4){
+                array = ['销售员','消费者'];
+                role_list = [4,0];
+              }else if(data[0].roleType == 8){
+                array = ['用户经理','销售员','消费者'];
+                role_list = [8,4,0];
               }
             }else{
               wx.removeStorageSync('room_id');
@@ -666,7 +672,7 @@ Page({
   clickMeetingItem(e){
     let click_idx = e.currentTarget.dataset.index;
     if(this.data.room_identity == 0){
-      // 用户
+      // 消费者
       if(click_idx == 0){
         wx.navigateTo({
           url: '/pages/promotion/index'

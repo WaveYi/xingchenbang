@@ -38,7 +38,7 @@
     <van-cell is-link title="申请公司" wx:else data-url="/pages/merchant/index" bindtap="pageTo" />
     <van-cell is-link title="审批公司" wx:if="{{identity == 1}}" data-url="/pages/qinqinhehe/companyApprove/index" bindtap="pageTo" />
     <van-cell is-link title="申请角色" wx:if="{{identity == 0}}" data-url="/pages/huiyibang/addRole/index?from=user" bindtap="pageTo" />
-    <van-cell is-link title="更多信息"  data-url="/pages/shopmall/index" bindtap="pageTo" />
+    <!-- <van-cell is-link title="更多信息"  data-url="/pages/shopmall/index" bindtap="pageTo" /> -->
     <!-- <van-cell is-link title="物流站点记录" data-url="/pages/huiyibang/farm/index" bindtap="pageTo" /> -->
     <!-- <van-cell is-link title="扫码绑定设备" bindtap="scanLookLogistisc" /> -->
     <!-- <van-cell is-link title="嘉宾登记信息规则" wx:if="{{is_boss == 1 && (identity == 1 || identity == 2)}}" data-url="/pages/huiyibang/rule/index" bindtap="pageTo" /> -->

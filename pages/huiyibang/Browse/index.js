@@ -9,6 +9,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    infoList:[{
+      name:"test"
+    }],
+    list_title:"用户使用信息",
     functionList:[
       {
         name:'出售成功列表',
