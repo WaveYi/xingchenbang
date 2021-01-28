@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "星辰帮",
+  "navigationBarTitleText": "星辰要访",
   "usingComponents": {
     "van-nav-bar": "@vant/weapp/nav-bar/index",
     "van-cell": "@vant/weapp/cell/index",
