@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/huiyibang/Browse/index",
     "pages/userInfo/index",
     "pages/promotion/index",
     "pages/search/index",
@@ -30,6 +29,7 @@
     "pages/huiyibang/addTable/index",
     "pages/huiyibang/winner/index",
     "pages/huiyibang/addWinner/index",
+    "pages/huiyibang/Browse/index",
     "pages/huiyibang/BrowseList/index",
     "pages/huiyibang/BrowseDetail/index",
     "pages/huiyibang/videoList/index",
