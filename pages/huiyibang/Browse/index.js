@@ -9,11 +9,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    page: 1,
-    infoList:[{
-      name:"test"
-    }],
-    list_title:"用户使用信息",
     functionList:[
       {
         name:'出售成功列表',
@@ -23,6 +18,14 @@ Page({
       //   name:'签到签退列表',
       //   url: '/pages/huiyibang/signList/index'
       // },
+      {
+        name: '代理人浏览效率',
+        url: '/pages/huiyibang/BrowseList/index'
+      },
+      {
+        name: '查看视频浏览',
+        url: '/pages/huiyibang/browsePage/index'
+      },
       // {
       //   name:'嘉宾活跃状态',
       //   url: '/pages/huiyibang/activeStatus/index'
@@ -31,10 +34,6 @@ Page({
       //   name: '查看投票列表',
       //   url: '/pages/huiyibang/voteList/index'
       // },
-      {
-        name: '浏览效率',
-        url: '/pages/huiyibang/BrowseList/index'
-      },
       // {
       //   name:'品种分布趋势图',
       //   url: '/pages/huiyibang/shipment/index'
@@ -62,21 +61,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let data = {
-      current: this.data.page,
-      size: 100
-    }
-    console.log('---身份id---'+wx.getStorageSync('room_role'+wx.getStorageSync('room_id')))
-    if(wx.getStorageSync('room_role'+wx.getStorageSync('room_id')) == 0){
-      data.userId = wx.getStorageSync('userInfo').unionId
-    }
-    query_my_code_browse(data).then((res)=>{
-      if(res.code == 200){
-        this.setData({
-          infoList: res.data.records
-        })
-      }
-    })
+    
   },
   pageTo(e){
     let url = e.currentTarget.dataset.url;

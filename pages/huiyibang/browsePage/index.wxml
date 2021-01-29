@@ -1,0 +1,9 @@
+<!--pages/huiyibang/browsePage/index.wxml-->
+<view class="list_container">
+  <view class="title">{{list_title}}:</view>
+  <view>
+    <view wx:for="{{infoList}}" wx:key="index">
+      <view class="list_item">{{item.nickname}}: {{item.remark}}</view>
+    </view>
+  </view>
+</view>

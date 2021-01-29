@@ -1,9 +1,11 @@
 {
   "pages": [
+    "pages/huiyibang/Browse/index",
     "pages/userInfo/index",
     "pages/promotion/index",
     "pages/search/index",
     "pages/demo/index",
+    "pages/huiyibang/browsePage/index",
     "pages/huiyibang/userApprove/index",
     "pages/huiyibang/moreVideo/index",
     "pages/huiyibang/moreVideoDetail/index",
@@ -28,7 +30,6 @@
     "pages/huiyibang/addTable/index",
     "pages/huiyibang/winner/index",
     "pages/huiyibang/addWinner/index",
-    "pages/huiyibang/Browse/index",
     "pages/huiyibang/BrowseList/index",
     "pages/huiyibang/BrowseDetail/index",
     "pages/huiyibang/videoList/index",

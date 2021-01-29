@@ -1,14 +1,8 @@
 <!--pages/huiyibang/Browse/index.wxml-->
-<view class="list_container">
-  <!-- <van-cell-group>
+<view>
+  <van-cell-group>
     <block wx:for="{{functionList}}" wx:key="index">
       <van-cell is-link title="{{item.name}}" data-url="{{item.url}}" bindtap="pageTo" />
     </block>
-  </van-cell-group> -->
-  <view class="title">{{list_title}}:</view>
-  <view>
-    <view wx:for="{{infoList}}" wx:key="index">
-      <view class="list_item">{{item.nickname}}: {{item.remark}}</view>
-    </view>
-  </view>
+  </van-cell-group>
 </view>

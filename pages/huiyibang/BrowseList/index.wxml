@@ -11,7 +11,7 @@
       <view class="count">代理邀请总数量：{{item.inviteNum?item.inviteNum:0}}</view>
       <view class="count">代理邀请已接受数量：{{item.inviteSuccessNum?item.inviteSuccessNum:0}}</view>
       <view class="count">代理邀请还未接受数量：{{item.inviteAwaitNum?item.inviteAwaitNum:0}}</view>
-      <view class="count">代理邀请被拒绝数量：{{item.inviteFailNum?item.inviteFailNum:0}}</view>
+      <!-- <view class="count">代理邀请被拒绝数量：{{item.inviteFailNum?item.inviteFailNum:0}}</view> -->
       <!-- <view class="status">代理状态：{{item.status==0?'无效':'有效'}}</view> -->
     </view>
     <view class="house_edit">

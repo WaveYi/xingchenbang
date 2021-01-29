@@ -1,0 +1,20 @@
+/* pages/huiyibang/browsePage/index.wxss */
+.list_container{
+  width: 100vw;
+  padding: 20rpx;
+  padding-right: 20rpx;
+}
+.title{
+  color: #000000;
+  font-size: 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1px solid #cfcfcf;
+}
+.list_item{
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 100%;
+  padding-left: 20rpx;
+  border-bottom: 1px solid #cfcfcf;
+}
