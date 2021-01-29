@@ -341,6 +341,9 @@ Page({
         },{
           title: '验证',
           icon: '/assets/hyb/hyb11.png'
+        },{
+          title: '审批',
+          icon: '/assets/hyb/hyb1.png'
         }
       ]
     }else if(this.data.room_identity == 9){
@@ -760,6 +763,11 @@ Page({
       }else if(click_idx == 3){
         // 验证
         this.signInOut()
+      }else if(click_idx == 4){
+        //老用户审批
+        wx.navigateTo({
+          url: "/pages/huiyibang/userApprove/index"
+        })
       }else{
         // 扫码绑定类型
         let that = this;

@@ -215,17 +215,17 @@ Page({
     }
   },
   bindDevice(){
-    if(this.data.coupon_index == null){
-      wx.showToast({
-        title: '请选择设备类型',
-        icon: 'none',
-        duration: 1500
-      })
-      return;
-    }
+    // if(this.data.coupon_index == null){
+    //   wx.showToast({
+    //     title: '请选择设备类型',
+    //     icon: 'none',
+    //     duration: 1500
+    //   })
+    //   return;
+    // }
     updateCodeCouponType({
       codeId: this.data.codeId,
-      couponType: this.data.coupon_index
+      couponType: 0
     }).then((res)=>{
       if(res.code == 200){
         this.setData({

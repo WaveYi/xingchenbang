@@ -1,4 +1,4 @@
-<!-- <van-nav-bar title="治疗帮" custom-class="navBar" fixed border="{{false}}" title-class="title" bind:click-left="onClickLeft">
+<!-- <van-nav-bar title="星辰要访" custom-class="navBar" fixed border="{{false}}" title-class="title" bind:click-left="onClickLeft">
   <van-icon color="#fff" size="32rpx" name="arrow-left" slot="left" />
 </van-nav-bar> -->
 <view class="back">

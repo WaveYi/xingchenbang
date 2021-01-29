@@ -364,7 +364,7 @@ Page({
     // }
     let data = {
       roomId: wx.getStorageSync('room_id'),
-      // couponType: this.data.coupon_index,
+      couponType: 0,
       couponName: this.data.coupon_name,
       imageNum: this.data.id,
       price: this.data.price,
