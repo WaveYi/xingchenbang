@@ -12,6 +12,7 @@
   border-bottom: 1px solid #cfcfcf;
 }
 .list_item{
+  font-size: 24rpx;
   height: 60rpx;
   line-height: 60rpx;
   width: 100%;

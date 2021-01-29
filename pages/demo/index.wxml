@@ -4,7 +4,7 @@
 </video>
 <button open-type='getUserInfo' lang="zh_CN" bindgetuserinfo="onGotUserInfo"></button>
 
-<van-popup show="{{ show }}" bind:close="onClose">
+<!-- <van-popup show="{{ show }}" bind:close="onClose">
   <view class="bind_box">
     <view class="bind_item">
       <text>点击确认绑定该设备</text>
@@ -20,6 +20,6 @@
       <button type="primary" catchtap="bindDevice">确认</button>
     </view>
   </view>
-</van-popup>
+</van-popup> -->
 
-<cover-view wx:if="{{is_has_more==1}}" class="more_txt" bindtap="toMorePage">更多</cover-view>
+<!-- <cover-view wx:if="{{is_has_more==1}}" class="more_txt" bindtap="toMorePage">更多</cover-view> -->

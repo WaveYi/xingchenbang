@@ -6,9 +6,10 @@
     </block>
   </van-cell-group> -->
   <view class="title">{{list_title}}:</view>
-  <view>
+  <view wx:if="{{infoList.length!=0}}">
     <view wx:for="{{infoList}}" wx:key="index">
-      <view class="list_item">{{item.nickname}}: {{item.remark}}</view>
+      <view class="list_item" >{{item.date}} : {{item.nickname}} 扫了 {{item.typeName}}的码</view>
     </view>
   </view>
+  <view wx:else class="no_data_txt">暂无数据</view>
 </view>

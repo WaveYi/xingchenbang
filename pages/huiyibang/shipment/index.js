@@ -92,7 +92,9 @@ Page({
 
           console.log(this.data.dataList)
         }
-        this.init_echarts();
+        setTimeout(()=>{
+          this.init_echarts();
+        },500)
       }
     })
   },
