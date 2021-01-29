@@ -1,6 +1,6 @@
 // pages/shipment/index.js
 import {
-  queryUserPositionSalesTendency
+  queryCouponSellStatistics
 } from '../../../api/user.js'
 import publicFun from '../../../utils/public.js'
 import * as echarts from '../../../components/ec-canvas/echarts';
@@ -12,6 +12,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    tab_list: ["邀请成功","邀请中"],
+    activeIndex: 0,
     dataList: [],
     ec: {
       lazyLoad: true // 延迟加载
@@ -25,9 +27,22 @@ Page({
    */
   onLoad: function (options) {
     this.echartsComponnet = this.selectComponent('#mychart');
-    this.getData(); //获取数据
+    this.getData(1); //获取数据
   },
 
+  clickNav(e){
+    this.setData({
+      lastMonth: [],
+      lastArr: [],
+      dataList: [],
+      activeIndex: e.currentTarget.dataset.index
+    })
+    if(e.currentTarget.dataset.index == 0){
+      this.getData(1)
+    }else{
+      this.getData(0);
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -41,39 +56,28 @@ Page({
   onShow: function () {
 
   },
-  getData(){
-    queryUserPositionSalesTendency({}).then((res)=>{
+  getData(is_accept){
+    let data = {
+      sellerId: wx.getStorageSync('userInfo').unionId,
+      accept: is_accept
+    }
+    queryCouponSellStatistics(data).then((res)=>{
       if(res.code == 200){
         if(res.data[0] != null){
-          let x_data = [[],[],[],[]];	
+          let x_data = [];	
           for(let i in res.data){
-            //食堂销售量	
-            x_data[0].push(res.data[i].canteenSalesVolume)
-            //餐厅销售量		
-            x_data[1].push(res.data[i].diningSalesVolume)
-            //超市销售量		
-            x_data[2].push(res.data[i].shopSalesVolume)
-            //入户销售量		
-            x_data[3].push(res.data[i].registerSalesVolume)
-          }
-          for(let i=0;i<4;i++){
-            let txt = '';
-            if(i==0){
-              txt = '食堂销售量';
-            }else if(i==1){
-              txt = '餐厅销售量';
-            }else if(i==2){
-              txt = '超市销售量';
-            }else{
-              txt = '入户销售量';
+            if(res.data[i].sellerNumber == null){
+              res.data[i].sellerNumber = 0;
             }
-            this.data.dataList.push({
-              name: txt,
-              type: 'line',
-              smooth: true,
-              data: x_data[i]
-            })
+            //销售量	
+            x_data.push(res.data[i].sellerNumber)
           }
+          this.data.dataList.push({
+            name: '销售数量',
+            type: 'line',
+            smooth: true,
+            data: x_data
+          })
           
           let date = res.data;
           for(let j in date){
@@ -113,7 +117,7 @@ Page({
   getOption(){
     var option = {
       title: {
-        text: '代理人传播趋势图',
+        text: '代理人收益报表',
         left: 'center'
       },
       // color: ["#37A2DA", "#67E0E3", "#9FE6B8"],

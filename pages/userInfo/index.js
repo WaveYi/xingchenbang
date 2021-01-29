@@ -1073,8 +1073,8 @@ Page({
     wx.scanCode({
       success(res) {
         console.log('扫码返回的参数: '+JSON.stringify(res.result));
-        // console.log('截取字符串后：'+res.result.replace("https://h.3p3.top?data=",""))
-        let data = res.result.replace("https://h.3p3.top?data=","");
+        // console.log('截取字符串后：'+res.result.replace("https://z.3p3.top?data=",""))
+        let data = res.result.replace("https://z.3p3.top?data=","");
         let codeNumber = data.split(',')[2].split('=')[1];
         console.log('---codeNumber: '+codeNumber);
         wx.navigateTo({

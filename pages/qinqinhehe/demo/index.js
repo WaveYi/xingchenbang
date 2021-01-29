@@ -26,7 +26,7 @@ Page({
         url: newUrl,
         name: "data"
       });
-      // let data = res.result.replace("https://h.3p3.top?data=","");
+      // let data = res.result.replace("https://z.3p3.top?data=","");
       console.log('222微信扫码接收的参数'+data);
     }
     // let data = wx.getStorageSync('params');

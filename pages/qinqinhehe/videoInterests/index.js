@@ -415,7 +415,7 @@ Page({
       wx.scanCode({
         
         success (res) {
-		  let data = res.result.replace("https://h.3p3.top?data=","");
+		  let data = res.result.replace("https://z.3p3.top?data=","");
           let company_id = JSON.parse(data).bossUnionId;
           let userId = JSON.parse(data).userId;
           console.log("company_id----"+company_id);
@@ -472,7 +472,7 @@ Page({
       wx.scanCode({
         
         success (res) {
-		  let data = res.result.replace("https://h.3p3.top?data=","");
+		  let data = res.result.replace("https://z.3p3.top?data=","");
           let company_id = JSON.parse(data).bossUnionId;
           let userId = JSON.parse(data).userId;
           console.log("company_id----"+company_id);

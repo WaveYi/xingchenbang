@@ -69,7 +69,7 @@ Page({
             })
           }
         })
-      }else if(identity != 1 && (this.data.type == 1 || this.data.type == 2)){
+      }else if(identity != 1 && (this.data.type == 1 || this.data.type == 2 || this.data.type == 8)){
         query_company_video_link({
           typeId: id
         }).then((res)=>{

@@ -15,8 +15,8 @@ function getToken() {
 }
 
 //url地址
-var requestUrl = 'http://192.168.1.2:8098'
-// var requestUrl = 'https://z.3p3.top'
+// var requestUrl = 'http://192.168.1.2:8098'
+var requestUrl = 'https://z.3p3.top'
 
 /*
 method 方法

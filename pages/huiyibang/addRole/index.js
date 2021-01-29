@@ -15,7 +15,7 @@ Page({
   data: {
     title: '申请角色',
     id: '',
-    role_type: '2',
+    role_type: '8',
     is_edit: 0,//是否修改进来 0:不是  1:是
     items: [
       {value: '8', name: '用户经理', checked: 'true'},

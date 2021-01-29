@@ -8,7 +8,7 @@
   <view class="title">{{list_title}}:</view>
   <view>
     <view wx:for="{{infoList}}" wx:key="index">
-      <view class="list_item">{{item.name}}扫描观看了视频</view>
+      <view class="list_item">{{item.nickname}}: {{item.remark}}</view>
     </view>
   </view>
 </view>

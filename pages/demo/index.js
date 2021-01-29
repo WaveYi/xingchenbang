@@ -52,20 +52,20 @@ Page({
       //解析url地址
       let newUrl = decodeURIComponent(options.q);
       console.log('----微信扫码接收的参数newUrl----'+newUrl);
-      data = newUrl.replace("https://h.3p3.top?data=","");
+      data = newUrl.replace("https://z.3p3.top?data=","");
       is_yqh = data.indexOf("IdKey");
       //获取对应number参数
       // data = wx.getQueryString({
       //   url: newUrl,
       //   name: "data"
       // });
-      // let data = res.result.replace("https://h.3p3.top?data=","");
+      // let data = res.result.replace("https://z.3p3.top?data=","");
       // console.log('----微信扫码接收的参数----'+newUrl); 
       console.log('---是否包含type---= '+is_yqh);
       console.log('----微信扫码接收的参数----'+data);
     }else{
       data = decodeURIComponent(wx.getStorageSync('params'));
-      data = data.replace("https://h.3p3.top?data=","");
+      data = data.replace("https://z.3p3.top?data=","");
       is_yqh = data.indexOf("IdKey");
       console.log('---是否包含type---= '+is_yqh)
       console.log('扫码接收的参数'+decodeURIComponent(data));
@@ -111,7 +111,8 @@ Page({
         get_video_link({
           roomId: room_id,
           menuId: this.data.menu_id,
-          data: data
+          data: data,
+          loginMark: true
         }).then((res)=>{
           console.log('----视频列表----'+JSON.stringify(res))
           if(res.code == 200){
@@ -160,7 +161,8 @@ Page({
         get_video_link({
           roomId: wx.getStorageSync('room_id'),
           menuId: this.data.menu_id,
-          data: data
+          data: data,
+          loginMark: false
         }).then((res)=>{
           if(res.code == 200){
             let newData = [];

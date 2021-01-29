@@ -1865,6 +1865,14 @@ export function queryCouponSellAmountStatisticalTrend(data) {
     data
   })
 }
+//查询优惠券统计
+export function queryCouponSellStatistics(data) {
+  return request({
+    url: "/meeting/couponsell/queryCouponSellStatistics",
+    method: "POST",
+    data
+  })
+}
 
 
 // 治疗帮接口

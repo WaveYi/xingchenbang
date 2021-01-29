@@ -1,7 +1,7 @@
 <!--pages/huiyibang/lottery/index.wxml-->
 <view class="cont">
   <!-- 底部抽奖 -->
-  <image src="https://h.3p3.top/upload/2012037646371186.jpg" class="vote_backimg"></image>
+  <image src="https://z.3p3.top/upload/2012037646371186.jpg" class="vote_backimg"></image>
   <view class='luck-draw' wx:if="{{luckDrawID==1}}">
   <image class='draw-img' src='{{bg}}'></image>
   <view class='show-draw' wx:if="{{drawId==1}}" bindtap='getAnmiation'>点击抽奖</view>

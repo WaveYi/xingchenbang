@@ -2,7 +2,7 @@
 <view class="form_box">
   <form bindsubmit="submitForm">
     <view class="title">编辑区</view>
-    <view class="form_item">
+    <!-- <view class="form_item">
       <view class="form_txt">促销券类型</view>
       <view class="form_content">
         <picker mode="selector" range="{{couponTypes}}" range-key="name" bindchange="bindPickerChange">
@@ -11,7 +11,7 @@
           </view>
         </picker>
       </view>
-    </view>
+    </view> -->
     <view class="form_item">
       <text class="form_txt">{{from_type==0?'促销券':'代金券'}}名称</text>
       <view class="form_content"><input placeholder="{{from_type==0?'请输入促销券名称':'请输入代金券名称'}}" value="{{coupon_name}}" bindinput="getCouponName"></input></view>

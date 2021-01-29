@@ -1,6 +1,6 @@
 // pages/huiyibang/Browse/index.js
 import {
-
+  query_my_code_browse
 } from '../../../api/user.js'
 import publicFun from '../../../utils/public.js'
 Page({
@@ -9,6 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    page: 1,
     infoList:[{
       name:"test"
     }],
@@ -61,7 +62,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    let data = {
+      current: this.data.page,
+      size: 100
+    }
+    console.log('---身份id---'+wx.getStorageSync('room_role'+wx.getStorageSync('room_id')))
+    if(wx.getStorageSync('room_role'+wx.getStorageSync('room_id')) == 0){
+      data.userId = wx.getStorageSync('userInfo').unionId
+    }
+    query_my_code_browse(data).then((res)=>{
+      if(res.code == 200){
+        this.setData({
+          infoList: res.data.records
+        })
+      }
+    })
   },
   pageTo(e){
     let url = e.currentTarget.dataset.url;

@@ -304,10 +304,10 @@ Page({
   },
   submitForm(e){
     if(this.data.from_type == 0){
-      if(this.data.coupon_index == null){
-        publicFun.getToast('请选择促销券类型');
-        return;
-      }
+      // if(this.data.coupon_index == null){
+      //   publicFun.getToast('请选择促销券类型');
+      //   return;
+      // }
       if(this.data.date == ''){
         publicFun.getToast('请选择促销券有效时间');
         return;
@@ -364,7 +364,7 @@ Page({
     // }
     let data = {
       roomId: wx.getStorageSync('room_id'),
-      couponType: this.data.coupon_index,
+      // couponType: this.data.coupon_index,
       couponName: this.data.coupon_name,
       imageNum: this.data.id,
       price: this.data.price,

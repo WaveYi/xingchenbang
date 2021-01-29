@@ -1,2 +1,5 @@
 <!--pages/shipment/index.wxml-->
+<view class="nav_tab_box">
+  <view class="nav_item {{activeIndex==index?'active':''}}" bindtap="clickNav" data-index="{{index}}" wx:for="{{tab_list}}" wx:key="index">{{item}}</view>
+</view>
 <ec-canvas id="mychart" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
