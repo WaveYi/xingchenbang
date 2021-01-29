@@ -1,4 +1,4 @@
-<van-nav-bar title="治疗帮" left-arrow="{{true}}" left-text="{{back_txt}}" custom-class="navBar" fixed border="{{false}}" title-class="title" bind:click-left="onClickLeft">
+<van-nav-bar title="星辰要访" left-arrow="{{true}}" left-text="{{back_txt}}" custom-class="navBar" fixed border="{{false}}" title-class="title" bind:click-left="onClickLeft">
 </van-nav-bar>
 <video src="{{url}}" autoplay custom-cache="{{true}}" bindended="nextVideo" binderror="nextVideo" vslide-gesture>
 </video>
@@ -7,19 +7,19 @@
 <van-popup show="{{ show }}" bind:close="onClose">
   <view class="bind_box">
     <view class="bind_item">
-      <text>点击确认绑定该设备</text>
+      <text>点击确认绑定该产品</text>
     </view>
-    <view class="bind_item">
+    <!-- <view class="bind_item">
       <picker mode="selector" range="{{couponTypes}}" range-key="name" bindchange="bindPickerChange">
         <view class="picker">
           {{coupon_index?couponTypes[coupon_index].name:'请选择设备类型'}}
         </view>
       </picker>
-    </view>
+    </view> -->
     <view class="bind_item">
       <button type="primary" catchtap="bindDevice">确认</button>
     </view>
   </view>
 </van-popup>
 
-<cover-view wx:if="{{is_has_more==1}}" class="more_txt" bindtap="toMorePage">更多</cover-view>
+<!-- <cover-view wx:if="{{is_has_more==1}}" class="more_txt" bindtap="toMorePage">更多</cover-view> -->
